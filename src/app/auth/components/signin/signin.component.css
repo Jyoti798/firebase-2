@@ -1,0 +1,220 @@
+/* body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .sign-in-form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 360px;
+    transition: transform 0.3s;
+  }
+  
+  .sign-in-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .app-title {
+    color: #6366f1;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-subtitle {
+    color: #6b7280;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+  
+  .error-msg {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-btn:hover:not(:disabled) {
+    background: #4f46e5;
+  }
+  
+  .login-btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #6b7280;
+  }
+  
+  .signup-text {
+    color: #6366f1;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .signup-text:hover {
+    text-decoration: underline;
+  } */
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+.sign-in-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width:30%;
+    text-align: center;
+   margin: auto;
+}
+  
+  .app-title {
+    color: #1877f2;
+    margin-bottom: 5px;
+  }
+  
+  .form-subtitle {
+    color: #606770;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+    outline: none;
+  }
+  
+  .error-msg {
+    color: #f02849;
+    font-size: 13px;
+    text-align: left;
+    margin: 5px 0 0;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover:not(:disabled) {
+    background: #166fe5;
+  }
+  
+  .login-btn:disabled {
+    background: #9cb4d8;
+    cursor: not-allowed;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    color: #606770;
+    font-size: 14px;
+  }
+  
+  .signup-text {
+    color: #1877f2;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .signup-text:hover {
+    text-decoration: underline;
+  }
+  /* Error message box */
+.error-box {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Error text */
+  .error-text {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* General error message style */
+  .error-msg {
+    color: #f02849;
+    font-size: 13px;
+    text-align: left;
+    margin: 5px 0 0;
+  }
+  

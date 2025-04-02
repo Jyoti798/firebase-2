@@ -1,0 +1,93 @@
+<div class="form-container">
+  <!-- Error Message Display -->
+  <div *ngIf="errorMessage" class="error-box">
+    <p class="error-text">{{ errorMessage }}</p>
+  </div>
+
+  <form #formContainer="ngForm" (ngSubmit)="onSubmit()" class="register-form">
+    <h1 class="app-title">My App</h1>
+    <h3 class="form-heading">Register</h3>
+
+    <div class="form-group">
+      <label class="form-label">Name</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter your name"
+        required
+        [(ngModel)]="userInput.name"
+        #name="ngModel"
+        class="form-control"
+      />
+      <p class="error-msg" *ngIf="name.touched && name.invalid">
+        Name is required
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        email
+        [(ngModel)]="userInput.email"
+        #email="ngModel"
+        class="form-control"
+      />
+      <p class="error-msg" *ngIf="email.touched && email.invalid">
+        Valid email is required
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter password"
+        required
+        minlength="6"
+        [(ngModel)]="userInput.password"
+        #password="ngModel"
+        class="form-control"
+      />
+      <p class="error-msg" *ngIf="password.touched && password.invalid">
+        Password must be at least 6 characters
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">User Type</label>
+      <select
+        id="userType"
+        name="userType"
+        required
+        [(ngModel)]="userInput.type"
+        #userType="ngModel"
+        class="form-control select-input"
+      >
+        <option value="" disabled selected hidden>Select user type</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <p class="error-msg" *ngIf="userType.touched && userType.invalid">
+        User type is required
+      </p>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="formContainer.invalid"
+      class="btn primary-btn"
+    >
+      Register
+    </button>
+
+    <p class="signup-link">
+      Already have an account?
+      <span (click)="onGoToLogin()" class="signup-text">Login</span>
+    </p>
+  </form>
+</div>

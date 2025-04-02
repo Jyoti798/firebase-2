@@ -1,0 +1,43 @@
+
+<app-nav></app-nav>
+<div>
+    
+
+    <h3>Submit Attendance</h3>
+    <form>
+        <input type="date" [(ngModel)]="date" name="date">
+        <input type="time" [(ngModel)]="checkIn" name="checkIn">
+        <input type="time" [(ngModel)]="checkOut" name="checkOut">
+        <button type="button" (click)="submitAttendance()">Submit</button>
+    </form>
+
+    <h3>Your Attendance Records</h3>
+    <table>
+        <tr *ngFor="let record of records; let i = index">
+            <td>{{ record.date }}</td>
+            <td>{{ record.checkIn }}</td>
+            <td>{{ record.checkOut }}</td>
+            <td>{{ record.status }}</td>
+            <td>
+                <button (click)="openRequestForm(i)">Request</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Request Form (Modal) -->
+    <div *ngIf="showRequestForm" class="modal">
+        <div class="modal-content">
+            <h3>Request Change</h3>
+            <p>Date: {{ selectedRecord.date }}</p>
+            <p>Check-In: {{ selectedRecord.checkIn }}</p>
+            <p>Check-Out: {{ selectedRecord.checkOut }}</p>
+            <label>Reason:</label>
+            <textarea [(ngModel)]="requestReason"></textarea>
+            <br>
+            <button (click)="submitRequest()">Submit</button>
+            <button (click)="closeRequestForm()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+  

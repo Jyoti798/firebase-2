@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+<div>
+
+    <h3>Employee Requests</h3>
+
+    <table *ngIf="allRequests.length > 0">
+        <tr *ngFor="let record of allRequests; let i = index">
+          <td>{{ record.name }}</td>
+          <td>{{ record.date }}</td>
+          <td>{{ record.checkIn || 'N/A' }}</td>
+          <td>{{ record.checkOut || 'N/A' }}</td>
+          <td>{{ record.reason }}</td>
+          <td>{{ record.status }}</td>
+          <td>
+            <button (click)="approveRequest(i)" [disabled]="record.status !== 'Pending'">Approve</button>
+            <button (click)="rejectRequest(i)" [disabled]="record.status !== 'Pending'">Reject</button>
+          </td>
+        </tr>
+    </table>
+    <p *ngIf="allRequests.length === 0">No requests available.</p>
+</div>
+
+

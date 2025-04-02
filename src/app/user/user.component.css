@@ -1,0 +1,154 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Container */
+div {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h3 {
+    font-size: 1.6rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px 12px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="button"] {
+    background: #0d6efd;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background: #0a58ca;
+}
+
+/* Attendance Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: rgba(13, 110, 253, 0.1);
+}
+
+/* Request Button */
+button.request {
+    background: #ffc107;
+    color: #333;
+}
+
+button.request:hover {
+    background: #e0a800;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.modal-content button {
+    margin: 10px 5px;
+}
+
+button.cancel {
+    background: #dc3545;
+    color: white;
+}
+
+button.cancel:hover {
+    background: #b02a37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
