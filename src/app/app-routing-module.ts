@@ -4,6 +4,9 @@ import { AuthComponent } from "./auth/auth.component";
 import { AdminComponent } from "./admin/admin.component";
 import { User } from "./models/user/user";
 import { UserComponent } from "./user/user.component";
+import { adminGuard } from "./guards/admin.guard";
+import { authGuard } from "./guards/auth.guard";
+import { userGuard } from "./guards/user.guard";
 
 const routes: Routes = [
     { path: '', redirectTo: 'auth', pathMatch: 'full' },
@@ -13,11 +16,13 @@ const routes: Routes = [
     },
     {
       path: 'admin',
-component:AdminComponent
+component:AdminComponent,
+canActivate: [authGuard, adminGuard],
     },
     {
       path: 'user',
-component:UserComponent
+component:UserComponent,
+canActivate: [authGuard, userGuard],
     },
     { path: '**', redirectTo: 'auth' },
   ];
